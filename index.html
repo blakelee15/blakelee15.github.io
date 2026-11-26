@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>换捿真实_换捿真实节目档案_换捿真实社区影像</title>
+<meta name="description" content="换捿真实是一个记录城市真实生活影像的视频品牌，提供换捿真实节目档案、人物访谈、纪实短片、社区放映与创作指南，适合喜欢观察真实生活与城市细节的观众。">
+<meta name="keywords" content="纪实短片,人物访谈,城市影像,社区放映,真实记录">
+<style>
+:root{
+  --ink:#1a1a1a;
+  --ink-soft:#3d3d3d;
+  --muted:#6e6e6e;
+  --line:#e3e0d9;
+  --bg:#f7f5f0;
+  --panel:#ffffff;
+  --brand:#b3402a;
+  --brand-dark:#8a2f1e;
+  --brand-soft:#f6e7e2;
+  --accent:#2f5d50;
+  --accent-soft:#e6efec;
+  --gold:#c08a2e;
+  --radius:10px;
+  --radius-sm:6px;
+  --shadow:0 1px 2px rgba(26,26,26,.05),0 8px 24px rgba(26,26,26,.05);
+  --shadow-sm:0 1px 2px rgba(26,26,26,.06);
+  --maxw:1320px;
+  --announce-h:38px;
+  --header-h:64px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.72;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.2em}
+li{margin-bottom:.35em}
+section{scroll-margin-top:calc(var(--announce-h) + var(--header-h) + 14px)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.announce{background:var(--ink);color:#f2efe8;font-size:13px;height:var(--announce-h);display:flex;align-items:center;position:sticky;top:0;z-index:60}
+.announce .wrap{display:flex;align-items:center;gap:12px;overflow:hidden;width:100%}
+.announce .dot{width:7px;height:7px;border-radius:50%;background:#e8b04a;flex:none;box-shadow:0 0 0 3px rgba(232,176,74,.2)}
+.announce .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.announce a{color:#e8b04a;font-weight:600;flex:none}
+header.site{position:sticky;top:var(--announce-h);z-index:55;background:rgba(247,245,240,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);height:var(--header-h)}
+header.site .wrap{display:flex;align-items:center;gap:22px;height:100%}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand .mark{width:34px;height:34px;flex:none}
+.brand .name{font-size:19px;font-weight:800;letter-spacing:.5px}
+.brand .name small{display:block;font-size:10px;letter-spacing:2.4px;color:var(--muted);font-weight:600;margin-top:-3px}
+nav.main{display:flex;gap:20px;font-size:14px;color:var(--ink-soft);flex-wrap:wrap}
+nav.main a{padding:4px 0;border-bottom:2px solid transparent;transition:.18s}
+nav.main a:hover,nav.main a:focus-visible{color:var(--brand);border-color:var(--brand)}
+.head-tools{margin-left:auto;display:flex;align-items:center;gap:12px;flex:none}
+.searchbox{display:flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;gap:6px;box-shadow:var(--shadow-sm)}
+.searchbox input{border:0;outline:0;font-family:inherit;font-size:13px;width:132px;background:transparent;color:var(--ink)}
+.searchbox button{border:0;background:transparent;cursor:pointer;color:var(--muted);padding:0;display:flex}
+.btn{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:9px 18px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:.18s}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-ghost{border-color:var(--line);color:var(--ink-soft);background:#fff}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 10px;cursor:pointer}
+.hero{padding:44px 0 36px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2px;color:var(--brand);font-weight:700;text-transform:uppercase;margin-bottom:16px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--brand)}
+.hero h1{font-size:clamp(38px,5.4vw,62px);letter-spacing:2px;line-height:1.1;margin-bottom:18px}
+.hero .lead{font-size:16.5px;color:var(--ink-soft);max-width:33em;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-visual{position:relative;aspect-ratio:1/.92;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#2f3a36,#1a1f1d 60%,#3a2a24);box-shadow:var(--shadow)}
+.hero-visual svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-visual .cap{position:absolute;left:16px;bottom:14px;color:#efe9df;font-size:12px;letter-spacing:1.6px;background:rgba(0,0,0,.38);padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;border-top:1px solid var(--line);padding-top:22px;max-width:640px}
+.stats div b{display:block;font-size:22px;color:var(--brand);font-weight:800;letter-spacing:.5px}
+.stats div span{font-size:12.5px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:172px minmax(0,1fr) 244px;gap:30px;align-items:start;padding-bottom:60px}
+aside.left,aside.right{position:sticky;top:calc(var(--announce-h) + var(--header-h) + 18px)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.panel-h{font-size:12px;letter-spacing:2px;font-weight:800;color:var(--muted);padding:14px 16px 10px;text-transform:uppercase}
+.chan-list{list-style:none;margin:0;padding:0 8px 12px}
+.chan-list a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border-radius:var(--radius-sm);font-size:13.5px;color:var(--ink-soft);transition:.15s}
+.chan-list a:hover,.chan-list a:focus-visible{background:var(--brand-soft);color:var(--brand-dark)}
+.chan-list a span{font-size:11px;color:var(--muted);background:var(--bg);border-radius:999px;padding:1px 7px}
+.chan-list a:hover span{background:#fff;color:var(--brand)}
+.side-note{padding:14px 16px;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);line-height:1.7}
+.main-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.main-head h2{font-size:22px;letter-spacing:.5px}
+.main-head .sub{font-size:13px;color:var(--muted)}
+.block{margin-bottom:46px}
+.block-title{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.block-title h2{font-size:21px;letter-spacing:.4px}
+.block-title .idx{font-size:12px;font-weight:800;color:var(--brand);background:var(--brand-soft);border-radius:6px;padding:2px 8px;letter-spacing:1px}
+.block-desc{font-size:13.5px;color:var(--muted);margin-bottom:18px}
+.overview p{color:var(--ink-soft);font-size:15px}
+.overview .kv{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.overview .kv div{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px}
+.overview .kv b{display:block;font-size:13px;color:var(--brand);margin-bottom:3px}
+.overview .kv span{font-size:12.5px;color:var(--muted);line-height:1.6;display:block}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:.2s}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#d6d1c6}
+.card .thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:#e8e4dc}
+.card .thumb img{width:100%;height:100%;object-fit:cover}
+.card .thumb .type{position:absolute;left:10px;top:10px;background:rgba(26,26,26,.78);color:#fff;font-size:11px;padding:3px 9px;border-radius:999px;letter-spacing:.5px}
+.card .body{padding:13px 14px 15px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:15.5px;margin-bottom:6px;letter-spacing:.3px}
+.card .look{font-size:13px;color:var(--muted);line-height:1.65;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{font-size:11.5px;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:2px 9px;white-space:nowrap}
+.card .meta{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--muted);margin-top:11px;padding-top:9px;border-top:1px dashed var(--line)}
+.card .meta b{color:var(--brand);font-weight:700}
+.updates{list-style:none;padding:0;margin:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);overflow:hidden}
+.updates li{display:grid;grid-template-columns:76px 1fr auto;gap:14px;align-items:baseline;padding:11px 16px;border-bottom:1px solid var(--line);font-size:14px}
+.updates li:last-child{border-bottom:0}
+.updates time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.updates .t{font-weight:600}
+.updates .d{color:var(--muted);font-size:13px;margin-top:2px}
+.updates .b{font-size:11px;color:var(--brand);background:var(--brand-soft);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;gap:5px;transition:.18s}
+.cat:hover{border-color:var(--brand);background:var(--brand-soft)}
+.cat b{font-size:14.5px}
+.cat span{font-size:12px;color:var(--muted);line-height:1.55}
+.deep{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow-sm)}
+.deep h3{font-size:16.5px;margin:22px 0 8px;color:var(--brand-dark);letter-spacing:.4px}
+.deep h3:first-child{margin-top:0}
+.deep p{color:var(--ink-soft);font-size:14.5px}
+.deep ul{color:var(--ink-soft);font-size:14.5px}
+.deep .cmp{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 4px}
+.deep .cmp th,.deep .cmp td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.deep .cmp th{background:var(--bg);font-weight:700;font-size:13px}
+.deep .cmp td:first-child{font-weight:600;color:var(--ink)}
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;counter-reset:g}
+.guide .step{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 14px;position:relative}
+.guide .step::before{counter-increment:g;content:counter(g,decimal-leading-zero);position:absolute;right:14px;top:10px;font-size:22px;font-weight:800;color:var(--brand-soft)}
+.guide .step b{display:block;font-size:14.5px;margin-bottom:6px;color:var(--ink)}
+.guide .step p{font-size:13px;color:var(--muted);margin:0}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:13px 18px;font-weight:600;font-size:14.5px;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:18px;color:var(--brand);font-weight:700;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq details[open] summary{background:var(--brand-soft)}
+.faq .ans{padding:4px 18px 16px;font-size:14px;color:var(--ink-soft);border-top:1px solid var(--line)}
+.faq .ans p:last-child{margin-bottom:0}
+.comments{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.cmt{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;font-size:13.5px}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.cmt .av{width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none}
+.cmt .who b{font-size:13px}
+.cmt .who time{font-size:11px;color:var(--muted);margin-left:auto}
+.cmt p{margin:0;color:var(--ink-soft);line-height:1.65}
+.news{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.news li{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:6px 16px}
+.news .nt{font-size:14.5px;font-weight:600}
+.news .ns{font-size:13px;color:var(--muted);grid-column:1/-1;line-height:1.6}
+.news time{font-size:12px;color:var(--muted);white-space:nowrap}
+.related{display:flex;flex-wrap:wrap;gap:9px}
+.related a{font-size:13px;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 14px;color:var(--ink-soft);transition:.15s}
+.related a:hover,.related a:focus-visible{border-color:var(--brand);color:var(--brand);background:var(--brand-soft)}
+.rank{list-style:none;padding:0;margin:0;counter-reset:r}
+.rank li{counter-increment:r;display:grid;grid-template-columns:26px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:baseline;font-size:14px}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(r);font-weight:800;color:var(--muted);font-size:13px;text-align:center}
+.rank li:nth-child(-n+3)::before{color:var(--brand)}
+.rank .rd{font-size:12px;color:var(--muted);margin-top:2px}
+.rank .rv{font-size:12px;color:var(--brand);font-weight:700;white-space:nowrap}
+.right .panel + .panel{margin-top:16px}
+.mini-list{list-style:none;margin:0;padding:0 12px 14px}
+.mini-list li{padding:8px 4px;border-bottom:1px dashed var(--line);font-size:13px}
+.mini-list li:last-child{border-bottom:0}
+.mini-list a{display:block}
+.mini-list b{font-size:13.5px;display:block}
+.mini-list span{font-size:11.5px;color:var(--muted)}
+.timeline{list-style:none;margin:0;padding:0 16px 16px}
+.timeline li{position:relative;padding:0 0 14px 18px;border-left:2px solid var(--line);font-size:12.5px;color:var(--muted)}
+.timeline li:last-child{border-left-color:transparent;padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-6px;top:4px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--brand)}
+.timeline b{display:block;color:var(--ink);font-size:13px;margin-bottom:2px}
+.timeline time{font-size:11px;color:var(--muted)}
+.no-result{display:none;padding:14px 16px;font-size:13.5px;color:var(--brand-dark);background:var(--brand-soft);border-radius:var(--radius);margin-bottom:14px}
+mark{background:#ffe9a8;color:inherit;padding:0 1px;border-radius:2px}
+footer.site{background:#1d211f;color:#cfcabe;padding:44px 0 26px;font-size:13.5px}
+footer.site .cols{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:30px;margin-bottom:32px}
+footer.site .brand .name{color:#f3efe6;font-size:18px}
+footer.site .brand .name small{color:#98938a}
+footer.site p{color:#9c978d;line-height:1.75;margin:12px 0 0;max-width:26em}
+footer.site h4{font-size:12.5px;letter-spacing:2px;color:#8f8a80;margin-bottom:12px;font-weight:700}
+footer.site .fl{list-style:none;margin:0;padding:0}
+footer.site .fl li{margin-bottom:8px}
+footer.site .fl a{color:#cfcabe;transition:.15s}
+footer.site .fl a:hover{color:#e8b04a}
+footer.site .bottom{border-top:1px solid #323733;padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#86817a}
+footer.site .bottom span{line-height:1.7}
+@media(max-width:1080px){
+  .layout{grid-template-columns:minmax(0,1fr) 250px}
+  aside.left{display:none}
+  nav.main{display:none}
+  .menu-toggle{display:inline-flex}
+  header.site.open nav.main{display:flex;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:14px 22px;gap:12px;box-shadow:var(--shadow)}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .hero-visual{max-width:520px}
+}
+@media(max-width:820px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside.right{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .right .panel + .panel{margin-top:0}
+  footer.site .cols{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .overview .kv{grid-template-columns:1fr}
+  .deep{padding:20px 18px}
+}
+@media(max-width:740px){
+  .searchbox{display:none}
+  .updates li{grid-template-columns:1fr;gap:2px}
+  .updates time{order:-1}
+  .hero{padding:30px 0 24px}
+  .hero h1{font-size:36px}
+  .news li{grid-template-columns:1fr}
+  footer.site .cols{grid-template-columns:1fr}
+  .wrap{padding:0 16px}
+  .block{margin-bottom:36px}
+}
+@media(max-width:400px){
+  .cards{grid-template-columns:1fr}
+  .cats{grid-template-columns:1fr}
+}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="announce" role="status" aria-label="站点公告">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="txt">本周新增 12 条真实档案：城中村夜班记录、河涌清淤手记、旧书店闭店访谈已上线</span>
+    <a href="#updates">查看更新 →</a>
+  </div>
+</div>
+
+<header class="site" id="siteHeader">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="换捿真实 首页">
+      <svg class="mark" viewBox="0 0 40 40" role="img" aria-label="换捿真实标志">
+        <rect x="2" y="2" width="36" height="36" rx="9" fill="#b3402a"/>
+        <path d="M12 27V14.5c0-1 .8-1.8 1.8-1.8h7.4c1 0 1.8.8 1.8 1.8V27" fill="none" stroke="#f6e7e2" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="27" cy="16" r="3.4" fill="#f6e7e2"/>
+        <path d="M21.5 27c0-3 2.4-5.4 5.4-5.4S32 24 32 27" fill="none" stroke="#f6e7e2" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="16.5" cy="18.5" r="1.3" fill="#b3402a"/>
+      </svg>
+      <span class="name">换捿真实<small>HUANQI REAL</small></span>
+    </a>
+    <nav class="main" id="mainNav" aria-label="主导航">
+      <a href="#overview">品牌概述</a>
+      <a href="#featured">精选档案</a>
+      <a href="#updates">最新更新</a>
+      <a href="#cats">频道分类</a>
+      <a href="#deep">深度解析</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <div class="head-tools">
+      <form class="searchbox" role="search" onsubmit="return false;">
+        <input id="searchInput" type="search" placeholder="搜索档案 / 人物" aria-label="搜索站内档案与人物">
+        <button type="button" id="searchBtn" aria-label="执行搜索">
+          <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="m13.5 13.5 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+      <a class="btn btn-primary" href="#featured">看片单</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开导航菜单">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">City Documentary Studio · 2019—2026</span>
+      <h1>换捿真实</h1>
+      <p class="lead">一支以城市日常为拍摄对象的纪实团队。我们把镜头放在菜市场收摊后、夜班公交末班车、旧厂房改的排练厅里，用 12—28 分钟的短片记录那些不被报道却持续发生的生活。频道按人物、场所、手艺、事件四条线归档，每条档案都标注拍摄时间、地点与受访者身份。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#featured">浏览精选档案</a>
+        <a class="btn btn-ghost" href="#guide">第一次怎么看</a>
+      </div>
+      <div class="stats">
+        <div><b>186</b><span>已归档短片</span></div>
+        <div><b>34</b><span>长期跟拍人物</span></div>
+        <div><b>21</b><span>合作社区放映点</span></div>
+        <div><b>7 年</b><span>持续记录时间</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 480 440" preserveAspectRatio="xMidYMid slice" role="img" aria-label="夜晚街巷与摄影机的抽象构图">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#37423d"/><stop offset="1" stop-color="#191d1b"/>
+          </linearGradient>
+          <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e8b04a"/><stop offset="1" stop-color="#b3402a"/>
+          </linearGradient>
+        </defs>
+        <rect width="480" height="440" fill="url(#sky)"/>
+        <g opacity=".5" fill="#0f1211">
+          <rect x="24" y="150" width="86" height="290"/><rect x="126" y="196" width="64" height="244"/>
+          <rect x="300" y="128" width="78" height="312"/><rect x="392" y="182" width="66" height="258"/>
+        </g>
+        <g fill="url(#win)" opacity=".85">
+          <rect x="40" y="176" width="14" height="18" rx="2"/><rect x="68" y="176" width="14" height="18" rx="2"/>
+          <rect x="40" y="212" width="14" height="18" rx="2"/><rect x="68" y="248" width="14" height="18" rx="2"/>
+          <rect x="140" y="220" width="12" height="16" rx="2"/><rect x="162" y="256" width="12" height="16" rx="2"/>
+          <rect x="316" y="156" width="14" height="18" rx="2"/><rect x="344" y="156" width="14" height="18" rx="2"/>
+          <rect x="316" y="196" width="14" height="18" rx="2"/><rect x="344" y="236" width="14" height="18" rx="2"/>
+          <rect x="406" y="208" width="12" height="16" rx="2"/><rect x="428" y="244" width="12" height="16" rx="2"/>
+        </g>
+        <path d="M0 400h480v40H0z" fill="#0d100f"/>
+        <g stroke="#e8b04a" stroke-width="2" opacity=".55" stroke-linecap="round">
+          <path d="M210 400v-58"/><path d="M270 400v-58"/>
+        </g>
+        <g transform="translate(178 236)">
+          <rect x="0" y="0" width="124" height="76" rx="10" fill="#2b3330" stroke="#4b5651" stroke-width="2"/>
+          <circle cx="46" cy="38" r="22" fill="#161a19" stroke="#e8b04a" stroke-width="2.4"/>
+          <circle cx="46" cy="38" r="9" fill="#e8b04a" opacity=".85"/>
+          <rect x="80" y="14" width="30" height="18" rx="4" fill="#b3402a"/>
+          <rect x="86" y="20" width="18" height="6" rx="3" fill="#f6e7e2"/>
+          <rect x="14" y="62" width="96" height="6" rx="3" fill="#3d4744"/>
+        </g>
+        <g stroke="#f6e7e2" stroke-width="1.4" opacity=".35" fill="none">
+          <path d="M178 274c-46 0-70 26-70 58"/><path d="M302 274c46 0 70 26 70 58"/>
+        </g>
+      </svg>
+      <span class="cap">夜班末班车 · 2026 秋季档案</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="layout">
+
+    <aside class="left" aria-label="频道索引">
+      <div class="panel">
+        <div class="panel-h">频道索引</div>
+        <ul class="chan-list">
+          <li><a href="#cats">人物档案 <span>42</span></a></li>
+          <li><a href="#cats">场所记录 <span>31</span></a></li>
+          <li><a href="#cats">手艺与工序 <span>26</span></a></li>
+          <li><a href="#cats">城市事件 <span>19</span></a></li>
+          <li><a href="#cats">夜班系列 <span>18</span></a></li>
+          <li><a href="#cats">旧城改造 <span>15</span></a></li>
+          <li><a href="#cats">社区放映 <span>21</span></a></li>
+          <li><a href="#cats">创作手记 <span>14</span></a></li>
+        </ul>
+        <div class="side-note">档案按拍摄完成时间归档，标注受访者授权状态；未授权条目仅展示简介。</div>
+      </div>
+    </aside>
+
+    <div class="content">
+
+      <section class="block overview" id="overview">
+        <div class="block-title"><span class="idx">01</span><h2>换捿真实记录的方向</h2></div>
+        <p class="block-desc">一个纪实影像品牌具体拍什么、按什么标准归档、观众能查到哪些信息。</p>
+        <p>换捿真实做的是城市日常的长期记录，不是新闻快剪，也不是旅行风光。团队把镜头分到四条线上：人物档案，跟拍某个具体职业者一年以上，比如凌晨四点的豆腐作坊主、跑了十九年夜班公交的司机；场所记录，拍一个空间在改造前后的样子，像旧纺织厂改的排练厅、即将拆除的骑楼杂货铺；手艺与工序，完整走一遍流程，从选料、备料到成品出货；城市事件，记录一次具体的社区活动、一次清淤、一次搬迁。四条线共用同一套归档规则：拍摄时间、地点、受访者身份、授权状态、片长，缺一不录。</p>
+        <p>目前站内可查的 186 条档案里，22—28 分钟的长片约占三成，其余是 12—18 分钟的中短篇。题材集中在夜班、旧城、手艺三类，这也是观众搜索最多的方向。值得先看的是「夜班末班车」「河涌清淤四十天」「旧书店闭店访谈」三条，它们分别代表跟拍型、事件型与对话型三种不同的记录方式，看完基本能判断自己更适合哪一类。</p>
+        <div class="kv">
+          <div><b>跟拍型</b><span>同一人物跨季度回访，靠时间累积信息，节奏偏慢。</span></div>
+          <div><b>事件型</b><span>围绕一次具体行动集中拍摄，信息密度高，适合入门。</span></div>
+          <div><b>对话型</b><span>固定机位长访谈，靠受访者自述推进，几乎没有旁白。</span></div>
+        </div>
+      </section>
+
+      <section class="block" id="featured">
+        <div class="block-title"><span class="idx">02</span><h2>精选档案推荐</h2></div>
+        <p class="block-desc">按类型、看点与片长筛选出的 9 条档案，均已完成受访者授权。</p>
+        <div class="no-result" id="noResult">没有找到匹配的档案，试试「夜班」「手艺」「旧城」或具体片名。</div>
+        <div class="cards" id="cardGrid">
+
+          <article class="card" data-keywords="夜班末班车 公交 司机 夜班系列 人物">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-yebanbus01/400/300" width="400" height="300" loading="lazy" alt="夜班末班车档案封面，深夜公交车厢内的司机背影">
+              <span class="type">人物档案</span>
+            </div>
+            <div class="body">
+              <h3>夜班末班车</h3>
+              <p class="look">跟拍 19 路司机老陈整整十一个月，镜头几乎全在凌晨零点到两点之间。拍他如何记住每个常客的下车站，也拍他在终点站独自吃夜宵的十二分钟。全片没有旁白，靠车厢环境声推进。</p>
+              <div class="tags"><span class="tag">夜班系列</span><span class="tag">跟拍型</span><span class="tag">24 分钟</span></div>
+              <div class="meta"><span>热度 <b>9.6</b></span><span>2026-11-18 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-keywords="河涌清淤 城市事件 水务 工人 事件">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-hechong02/400/300" width="400" height="300" loading="lazy" alt="河涌清淤四十天档案封面，工人在河道内清理淤泥">
+              <span class="type">城市事件</span>
+            </div>
+            <div class="body">
+              <h3>河涌清淤四十天</h3>
+              <p class="look">从抽干水位到淤泥外运，完整记录一条内河涌的四十天整治过程。重点不在工程数据，而在沿岸居民的态度变化：前十天抱怨气味，第二十天开始有人送凉茶，最后一天有人在桥头放了一串鞭炮。</p>
+              <div class="tags"><span class="tag">事件型</span><span class="tag">旧城改造</span><span class="tag">18 分钟</span></div>
+              <div class="meta"><span>热度 <b>9.2</b></span><span>2026-11-12 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-keywords="旧书店 闭店 访谈 老板 对话 人物">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-jiushudian03/400/300" width="400" height="300" loading="lazy" alt="旧书店闭店访谈档案封面，堆满旧书的店面内景">
+              <span class="type">人物档案</span>
+            </div>
+            <div class="body">
+              <h3>旧书店闭店访谈</h3>
+              <p class="look">开了二十七年的旧书店关门前三天，老板坐在收银台后讲了四个小时。他逐本说明哪些书是收来的、哪些是别人寄卖的、哪些永远卖不掉。片子保留了大量停顿与翻书声，是理解旧书行业真实利润结构的一份口述材料。</p>
+              <div class="tags"><span class="tag">对话型</span><span class="tag">书店</span><span class="tag">28 分钟</span></div>
+              <div class="meta"><span>热度 <b>9.4</b></span><span>2026-11-08 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-keywords="豆腐作坊 凌晨 手艺 工序 人物">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-doufu04/400/300" width="400" height="300" loading="lazy" alt="凌晨四点的豆腐作坊档案封面，热气中的制作台">
+              <span class="type">手艺与工序</span>
+            </div>
+            <div class="body">
+              <h3>凌晨四点的豆腐作坊</h3>
+              <p class="look">从泡豆到出摊，把一整套工序拍完，全程只用现场声。观众能看到点卤时豆浆凝固的确切时刻，也能听到老板算成本：一斤黄豆出多少豆腐、一天卖完要多久。手艺类里信息最密的一条。</p>
+              <div class="tags"><span class="tag">工序记录</span><span class="tag">早餐</span><span class="tag">16 分钟</span></div>
+              <div class="meta"><span>热度 <b>8.9</b></span><span>2026-11-05 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-keywords="纺织厂 排练厅 场所 改造 旧城">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-fangzhichang05/400/300" width="400" height="300" loading="lazy" alt="纺织厂排练厅档案封面，旧厂房内的高大窗户与木地板">
+              <span class="type">场所记录</span>
+            </div>
+            <div class="body">
+              <h3>纺织厂改的排练厅</h3>
+              <p class="look">同一栋厂房的两个时期对照：2019 年还有机器轰鸣，2026 年变成舞蹈团的排练场。片子把老工人和年轻舞者的口述剪在一起，讲的是同一块地板承载的不同节奏。适合对旧改话题感兴趣的人。</p>
+              <div class="tags"><span class="tag">旧城改造</span><span class="tag">场所</span><span class="tag">21 分钟</span></div>
+              <div class="meta"><span>热度 <b>8.7</b></span><span>2026-10-29 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-keywords="菜市场 收摊 摊主 夜班 场所">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-caishichang06/400/300" width="400" height="300" loading="lazy" alt="菜市场收摊之后档案封面，空荡的摊位与地上的水渍">
+              <span class="type">场所记录</span>
+            </div>
+            <div class="body">
+              <h3>菜市场收摊之后</h3>
+              <p class="look">晚上八点半之后的市场是什么样？镜头跟着三位摊主收拾、算账、把剩下的菜分给相熟的人。没有旁白，只有拖车声、水冲地面的声音和几句方言闲聊。看完会知道一个市场真正的作息表。</p>
+              <div class="tags"><span class="tag">市井</span><span class="tag">场所</span><span class="tag">14 分钟</span></div>
+              <div class="meta"><span>热度 <b>9.0</b></span><span>2026-10-24 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-keywords="修表 手艺 工序 老师傅 人物">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-xiubiao07/400/300" width="400" height="300" loading="lazy" alt="修表四十年档案封面，放大镜下的机械表机芯">
+              <span class="type">手艺与工序</span>
+            </div>
+            <div class="body">
+              <h3>修表四十年</h3>
+              <p class="look">老师傅拆一只停走二十年的机械表，边拆边讲每个零件的作用。全片用微距拍摄，能看到游丝、擒纵叉这些平时看不见的结构。对机械感兴趣的观众可以当入门科普看，对手艺感兴趣的可以看他的工作台布局。</p>
+              <div class="tags"><span class="tag">工序记录</span><span class="tag">微距</span><span class="tag">19 分钟</span></div>
+              <div class="meta"><span>热度 <b>8.5</b></span><span>2026-10-19 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-keywords="社区放映 露天 老街 事件 放映点">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-shequfangying08/400/300" width="400" height="300" loading="lazy" alt="社区露天放映档案封面，老街空地上的幕布与折叠椅">
+              <span class="type">社区放映</span>
+            </div>
+            <div class="body">
+              <h3>老街露天放映记</h3>
+              <p class="look">记录了在老街空地上办的第七场免费放映：怎么借电、怎么固定幕布、下雨怎么办、来的都是谁。片子本身也是一次社区动员的样本，很多观众说看完才知道原来邻居里有这么多愿意搬椅子的人。</p>
+              <div class="tags"><span class="tag">社区放映</span><span class="tag">事件型</span><span class="tag">13 分钟</span></div>
+              <div class="meta"><span>热度 <b>8.8</b></span><span>2026-10-15 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-keywords="搬家 最后一夜 租客 旧城 人物">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/huanqi-banjia09/400/300" width="400" height="300" loading="lazy" alt="搬家前的最后一夜档案封面，堆满纸箱的出租屋">
+              <span class="type">人物档案</span>
+            </div>
+            <div class="body">
+              <h3>搬家前的最后一夜</h3>
+              <p class="look">一栋待拆居民楼里的六户人家，在搬离前的同一个晚上各自收拾。片子交叉剪辑，六条线互不打扰，只在凌晨三点同时出现搬东西的声响。没有煽情配乐，情绪来自纸箱上的字和没带走的旧家具。</p>
+              <div class="tags"><span class="tag">旧城改造</span><span class="tag">群像</span><span class="tag">26 分钟</span></div>
+              <div class="meta"><span>热度 <b>9.1</b></span><span>2026-10-09 上线</span></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="block" id="updates">
+        <div class="block-title"><span class="idx">03</span><h2>最新更新与拍摄动态</h2></div>
+        <p class="block-desc">2026 年 11 月内的上线、拍摄与放映安排，按时间倒序。</p>
+        <ul class="updates">
+          <li><time>2026-11-25</time><div><div class="t">「夜班末班车」加更番外篇</div><div class="d">补拍老陈退休前最后一趟车，片长 9 分钟，含未剪入正片的七段车厢对话。</div></div><span class="b">已上线</span></li>
+          <li><time>2026-11-24</time><div><div class="t">「河涌清淤四十天」弹幕问答开放</div><div class="d">摄制组集中回复了 46 条关于施工工序与水质检测的提问，整理成文字版附在片尾。</div></div><span class="b">已更新</span></li>
+          <li><time>2026-11-22</time><div><div class="t">「旧书店闭店访谈」完整版解封</div><div class="d">因受访者补充授权，原先剪掉的 11 分钟谈进货渠道的段落重新上线。</div></div><span class="b">已解封</span></li>
+          <li><time>2026-11-21</time><div><div class="t">新片开机：城南汽修一条街</div><div class="d">预计跟拍三个月，记录拆迁通知下发后十一家修理铺的应对，2027 年 2 月放出先导片段。</div></div><span class="b">拍摄中</span></li>
+          <li><time>2026-11-19</time><div><div class="t">「豆腐作坊」工序图解上线</div><div class="d">把泡豆、磨浆、点卤、压制成型四个阶段拆成 18 张图，附时间与温度说明。</div></div><span class="b">已上线</span></li>
+          <li><time>2026-11-17</time><div><div class="t">第 21 个社区放映点挂牌</div><div class="d">新增点位在东山口的旧祠堂，每月第二个周六晚放映，免费入场，需自带坐垫。</div></div><span class="b">新点位</span></li>
+          <li><time>2026-11-14</time><div><div class="t">「纺织厂改的排练厅」补拍舞者排练</div><div class="d">补充了舞团为厂庆做的专场排练，正片时长由 18 分钟延长到 21 分钟。</div></div><span class="b">已更新</span></li>
+          <li><time>2026-11-11</time><div><div class="t">「菜市场收摊之后」方言字幕修正</div><div class="d">根据本地观众反馈，重译了 37 处方言口语，并补注了三种本地菜名。</div></div><span class="b">已修正</span></li>
+          <li><time>2026-11-07</time><div><div class="t">「修表四十年」微距素材开放授权</div><div class="d">机芯拆解片段可申请用于教学，需注明来源与受访者署名，非商用免费。</div></div><span class="b">已开放</span></li>
+          <li><time>2026-11-03</time><div><div class="t">「搬家前的最后一夜」六户回访</div><div class="d">半年后回访其中四户，其中两户搬回同片区的新楼，回访片段作为片尾彩蛋。</div></div><span class="b">已上线</span></li>
+        </ul>
+      </section>
+
+      <section class="block" id="cats">
+        <div class="block-title"><span class="idx">04</span><h2>频道分类</h2></div>
+        <p class="block-desc">八个可检索的类别，点进去是同类档案的聚合列表。</p>
+        <div class="cats">
+          <a class="cat" href="#featured"><b>人物档案</b><span>长期跟拍的个体故事，42 条，多为跟拍型。</span></a>
+          <a class="cat" href="#featured"><b>场所记录</b><span>空间在改造前后的样子，31 条，含对照剪辑。</span></a>
+          <a class="cat" href="#featured"><b>手艺与工序</b><span>完整走一遍制作流程，26 条，现场声为主。</span></a>
+          <a class="cat" href="#featured"><b>城市事件</b><span>一次具体行动的全记录，19 条，信息密度高。</span></a>
+          <a class="cat" href="#featured"><b>夜班系列</b><span>凌晨零点到六点之间的工作与通勤，18 条。</span></a>
+          <a class="cat" href="#featured"><b>旧城改造</b><span>拆迁、回迁与空间再利用，15 条，跨度七年。</span></a>
+          <a class="cat" href="#featured"><b>社区放映</b><span>露天放映与邻里活动记录，21 条，含办场方法。</span></a>
+          <a class="cat" href="#deep"><b>创作手记</b><span>拍摄方法、设备选择与授权流程，14 篇文字加短片。</span></a>
+        </div>
+      </section>
+
+      <section class="block" id="deep">
+        <div class="block-title"><span class="idx">05</span><h2>深度解析：三类纪实短片的差别与取舍</h2></div>
+        <p class="block-desc">按拍摄方式分成跟拍型、事件型、对话型，讲清楚各自的成本、信息结构与适合的观看方式。</p>
+        <div class="deep">
+          <h3>跟拍型：靠时间换信息</h3>
+          <p>跟拍型的核心成本是时间。「夜班末班车」跟了十一个月，「搬家前的最后一夜」虽然只拍一晚，但前期沟通花了六周。这类片子的信息不是靠采访问出来的，而是靠重复出现的行为累积出来的：司机连续三十天在同一站多停四秒，这个细节只有在足够长的素材里才看得见。缺点是节奏慢，前五分钟往往没有明确事件；优点是看完之后你对一个人的生活节奏会有具体印象，而不是记住几句金句。</p>
+          <p>判断一条跟拍型档案值不值得投入时间，可以看三个指标：跟拍跨度是否超过三个月、是否有跨季度回访、是否标注了受访者的知情同意范围。跨度短的跟拍容易拍成一次加长版采访。</p>
+
+          <h3>事件型：在一次行动里找结构</h3>
+          <p>事件型的时间边界清楚，比如「河涌清淤四十天」就是从抽水到通水。这类片子的难点在于取舍：四十天素材可以剪成工程汇报，也可以剪成居民态度变化。换捿真实的处理方式是保留时间轴，按天推进，把工程信息压到字幕里，把人的反应留在画面里。观众能同时看到进度和情绪两条线。</p>
+          <p>事件型适合第一次接触纪实短片的观众，因为不需要长期记忆人物关系。但它也有陷阱：事件本身越有戏剧性，越容易掩盖拍摄者的判断。看这类片子时可以留意镜头有没有一直停在冲突上，如果全程只拍矛盾双方对峙，那多半是剪给情绪看的，不是剪给理解看的。</p>
+
+          <h3>对话型：让受访者自己组织叙述</h3>
+          <p>对话型几乎不靠画面推进，「旧书店闭店访谈」就是固定机位拍四个小时，最后剪成 28 分钟。这类片子的价值在于让受访者用自己的逻辑讲完一件事，包括那些不漂亮的细节：进货价、赊账、卖不掉的书怎么处理。拍摄者要做的是少打断、少引导，把提问压到最低。</p>
+          <p>对话型最怕的是提问者抢戏。判断标准很简单：如果片子里提问的声音比回答还多，或者每个回答都被追问引向同一个结论，那它更接近访谈节目，不是纪实记录。</p>
+
+          <h3>三类方式的横向比较</h3>
+          <table class="cmp">
+            <thead>
+              <tr><th>维度</th><th>跟拍型</th><th>事件型</th><th>对话型</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>制作周期</td><td>3—12 个月</td><td>2—8 周</td><td>1—3 天拍摄，剪辑 2 周</td></tr>
+              <tr><td>信息密度</td><td>低，靠累积</td><td>高，靠事件推进</td><td>中，靠自述展开</td></tr>
+              <tr><td>入门难度</td><td>偏高</td><td>低</td><td>中</td></tr>
+              <tr><td>典型片长</td><td>22—28 分钟</td><td>13—19 分钟</td><td>20—30 分钟</td></tr>
+              <tr><td>适合场景</td><td>有整块时间、愿意慢看</td><td>想快速了解一件事</td><td>想听完整的一段人生经验</td></tr>
+            </tbody>
+          </table>
+
+          <h3>归档规则与授权说明</h3>
+          <p>所有档案在发布前需完成三件事：受访者签署影像使用授权、敏感信息（门牌、车牌、未成年面部）做处理、拍摄时间与地点写入片头卡片。未完成授权的条目只上线简介与剧照，正片不公开。这也是站内部分条目点进去只有文字的原因。授权范围分三类：仅站内播放、可用于社区放映、可用于教学引用，观众在片尾字幕里能看到具体标注。</p>
+        </div>
+      </section>
+
+      <section class="block" id="guide">
+        <div class="block-title"><span class="idx">06</span><h2>观看路径：先看什么，怎么判断</h2></div>
+        <p class="block-desc">按时间预算和兴趣方向给出四条入口，不是操作说明。</p>
+        <div class="guide">
+          <div class="step"><b>只有 15 分钟</b><p>从「菜市场收摊之后」或「老街露天放映记」入手，片长 13—14 分钟，事件边界清楚，不需要前置知识。</p></div>
+          <div class="step"><b>想了解一门手艺</b><p>先看「凌晨四点的豆腐作坊」建立工序概念，再看「修表四十年」理解精密拆解，两条互补，一条讲流程一条讲结构。</p></div>
+          <div class="step"><b>对旧城话题有兴趣</b><p>按「纺织厂改的排练厅」→「搬家前的最后一夜」→「河涌清淤四十天」的顺序看，分别对应空间再利用、人口迁出、公共设施整治三个层面。</p></div>
+          <div class="step"><b>想判断是否值得追更</b><p>看片尾的授权标注和跟拍跨度。跨度超过半年、标注了回访的条目，通常信息更扎实，也更容易在后续更新里补充新内容。</p></div>
+        </div>
+      </section>
+
+      <section class="block faq" id="faq">
+        <div class="block-title"><span class="idx">07</span><h2>常见问题</h2></div>
+        <p class="block-desc">关于片长、更新节奏、授权与观看顺序的六个具体问题。</p>
+        <details>
+          <summary>换捿真实的片子一般多长，更新频率是多少？</summary>
+          <div class="ans"><p>正片以 12—28 分钟为主，其中 22—28 分钟的长片约占三成。更新节奏不固定，平均每月上线 4—6 条新档案，遇到跟拍项目收尾会集中放出。2026 年 11 月已上线 5 条，另有 1 条番外篇。</p></div>
+        </details>
+        <details>
+          <summary>跟拍型和事件型有什么区别，第一次看该选哪个？</summary>
+          <div class="ans"><p>跟拍型靠长时间跟同一个人，信息靠重复行为累积；事件型围绕一次具体行动，时间边界清楚。第一次看建议选事件型，比如「河涌清淤四十天」，18 分钟能完整了解一件事，不需要记人物关系。</p></div>
+        </details>
+        <details>
+          <summary>为什么有些档案点进去只有简介，没有正片？</summary>
+          <div class="ans"><p>因为受访者尚未完成影像使用授权，或授权范围只覆盖站内播放而未覆盖公开放映。这类条目会保留简介、拍摄时间与剧照，正片在授权补齐后上线。「旧书店闭店访谈」的完整版就是 11 月 22 日补授权后解封的。</p></div>
+        </details>
+        <details>
+          <summary>手艺类片子里的工序是完整的吗，会不会跳步骤？</summary>
+          <div class="ans"><p>「凌晨四点的豆腐作坊」和「修表四十年」都是完整流程拍摄，不跳步骤，但会把等待时间做加速处理，并在画面角标注明倍速。想核对细节可以看配套的工序图解，豆腐那条附了 18 张带温度与时间标注的图。</p></div>
+        </details>
+        <details>
+          <summary>社区放映怎么参加，需要报名吗？</summary>
+          <div class="ans"><p>目前有 21 个放映点，多数在祠堂、社区活动室或旧厂房。免费入场，不需要报名，自带坐垫即可。东山口旧祠堂的点位固定在每月第二个周六晚七点半开始，雨天顺延一周，具体排期在最新更新里公布。</p></div>
+        </details>
+        <details>
+          <summary>片子里的方言有字幕吗，听不懂会不会影响观看？</summary>
+          <div class="ans"><p>全部条目配普通话字幕，方言对白另加注释。「菜市场收摊之后」在 11 月 11 日重译了 37 处方言口语并补注三种本地菜名，就是为了让非本地观众也能跟上对话里的具体信息。</p></div>
+        </details>
+      </section>
+
+      <section class="block" id="comments">
+        <div class="block-title"><span class="idx">08</span><h2>观众评论</h2></div>
+        <p class="block-desc">来自站内与放映现场的 15 条留言，保留中性评价。</p>
+        <div class="comments">
+          <div class="cmt"><div class="who"><span class="av">林</span><b>林间小满</b><time>2026-11-25</time></div><p>「夜班末班车」番外篇里老陈说他不记得乘客名字只记得下车站，这句话比正片任何一段都戳我。</p></div>
+          <div class="cmt"><div class="who"><span class="av">周</span><b>周三加班中</b><time>2026-11-24</time></div><p>河涌那条我住附近，前十天确实味道很大，片子里居民抱怨的部分拍得很实，没有美化。</p></div>
+          <div class="cmt"><div class="who"><span class="av">阿</span><b>阿棠不喝咖啡</b><time>2026-11-24</time></div><p>旧书店完整版补上的进货渠道那段很有价值，讲了怎么从废品站挑书，这在我看过的同类片里很少见。</p></div>
+          <div class="cmt"><div class="who"><span class="av">陈</span><b>陈默看片</b><time>2026-11-23</time></div><p>豆腐作坊的点卤镜头拍得真好，但我觉得压制成型那段剪得有点赶，希望工序图解能补上时间参数。</p></div>
+          <div class="cmt"><div class="who"><span class="av">苏</span><b>苏打水加冰</b><time>2026-11-22</time></div><p>纺织厂那条两个时期的画面对照很聪明，老工人说机器声像下雨，年轻舞者说地板会响，其实是同一件事。</p></div>
+          <div class="cmt"><div class="who"><span class="av">何</span><b>何同学在读书</b><time>2026-11-21</time></div><p>第一次看纪实短片选的就是菜市场那条，14 分钟没有旁白居然完全看得下去，方言字幕帮了大忙。</p></div>
+          <div class="cmt"><div class="who"><span class="av">吴</span><b>吴记修表铺</b><time>2026-11-20</time></div><p>同行看了修表那条，说拆解顺序基本正确，只有游丝部分为了拍摄方便调整了步骤，这点片尾有说明，挺诚实。</p></div>
+          <div class="cmt"><div class="who"><span class="av">郑</span><b>郑一半</b><time>2026-11-19</time></div><p>露天放映那场我在现场，片子里的雨最后没下，剪进去的乌云镜头是前一天的素材，看到这里笑了一下。</p></div>
+          <div class="cmt"><div class="who"><span class="av">许</span><b>许愿不熬夜</b><time>2026-11-18</time></div><p>搬家那条六户交叉剪辑有点碎，看到二十分钟才分清哪家是哪家，建议片头加个人物关系卡。</p></div>
+          <div class="cmt"><div class="who"><span class="av">梁</span><b>梁上燕子</b><time>2026-11-16</time></div><p>关注很久了，最喜欢的是每条片子都标了拍摄时间和授权范围，这点比很多同类账号扎实。</p></div>
+          <div class="cmt"><div class="who"><span class="av">黄</span><b>黄浦江边散步</b><time>2026-11-15</time></div><p>跟拍型确实需要耐心，前五分钟我差点划走，坚持看完末班车之后理解了这种节奏的用意。</p></div>
+          <div class="cmt"><div class="who"><span class="av">罗</span><b>罗卜青菜</b><time>2026-11-13</time></div><p>希望多拍点手艺类，豆腐和修表都看完了，想看点跟木头或者跟铁有关的工序。</p></div>
+          <div class="cmt"><div class="who"><span class="av">高</span><b>高架桥下的猫</b><time>2026-11-11</time></div><p>方言字幕修正之后重看了一遍，确实顺多了，之前有三句完全猜不出来在说什么。</p></div>
+          <div class="cmt"><div class="who"><span class="av">沈</span><b>沈老师说电影</b><time>2026-11-09</time></div><p>对话型那条提问几乎听不见，这点处理得好。但剪辑上还是保留了少量引导性追问，可以更彻底一点。</p></div>
+          <div class="cmt"><div class="who"><span class="av">方</span><b>方糖两块</b><time>2026-11-06</time></div><p>城南汽修一条街开机了很期待，我家就在那附近，想知道拆迁通知下来之后那些铺子最后搬去哪了。</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="news">
+        <div class="block-title"><span class="idx">09</span><h2>相关资讯</h2></div>
+        <p class="block-desc">近一个月内的档案上线、放映安排与社区讨论焦点。</p>
+        <ul class="news">
+          <li>
+            <span class="nt">「夜班末班车」番外篇上线，补拍司机老陈退休前最后一趟</span>
+            <time>2026-11-25</time>
+            <span class="ns">番外篇 9 分钟，含七段未剪入正片的车厢对话。摄制组同时公布了 19 路沿线六个站点的常客构成统计，作为跟拍项目的收尾材料。</span>
+          </li>
+          <li>
+            <span class="nt">东山口旧祠堂成为第 21 个社区放映点</span>
+            <time>2026-11-17</time>
+            <span class="ns">固定每月第二个周六晚七点半放映，免费入场，雨天顺延一周。首场放映选了「老街露天放映记」与本片拍摄过程的幕后片段。</span>
+          </li>
+          <li>
+            <span class="nt">「旧书店闭店访谈」补授权后完整版重新公开</span>
+            <time>2026-11-22</time>
+            <span class="ns">新增 11 分钟关于进货渠道与赊账方式的叙述，受访者同时把授权范围从仅站内播放扩大到可用于社区放映。</span>
+          </li>
+          <li>
+            <span class="nt">城南汽修一条街项目开机，预计跟拍三个月</span>
+            <time>2026-11-21</time>
+            <span class="ns">记录拆迁通知下发后十一家修理铺的应对方式，包括搬迁、合并与歇业三种选择。先导片段计划在 2027 年 2 月放出。</span>
+          </li>
+          <li>
+            <span class="nt">手艺类条目新增工序图解，首批覆盖豆腐与修表</span>
+            <time>2026-11-19</time>
+            <span class="ns">图解把关键步骤拆成单帧，附时间、温度与工具说明，方便观众核对正片里被加速处理的部分。后续将扩展到木工与打铁两类。</span>
+          </li>
+          <li>
+            <span class="nt">「菜市场收摊之后」方言字幕重译，修正 37 处口语</span>
+            <time>2026-11-11</time>
+            <span class="ns">根据本地观众反馈重译，并补注三种本地菜名。摄制组表示后续方言较重的条目都会做两轮字幕校对。</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block" id="related">
+        <div class="block-title"><span class="idx">10</span><h2>相关推荐</h2></div>
+        <p class="block-desc">延伸方向与具体条目，和上面的精选片单角度不同。</p>
+        <div class="related">
+          <a href="#featured">城中村夜班记录</a>
+          <a href="#featured">旧厂房改造对照</a>
+          <a href="#featured">木工工序完整记录</a>
+          <a href="#featured">打铁铺最后一代</a>
+          <a href="#featured">早市与夜市作息比较</a>
+          <a href="#deep">授权范围三类说明</a>
+          <a href="#guide">四条观看路径</a>
+          <a href="#news">2026 秋季档案上线表</a>
+        </div>
+      </section>
+
+      <section class="block" id="rank">
+        <div class="block-title"><span class="idx">11</span><h2>本月档案热榜</h2></div>
+        <p class="block-desc">按站内完整播放率与放映现场反馈综合排序，统计截至 2026-11-25。</p>
+        <ol class="rank">
+          <li><div><b>夜班末班车</b><div class="rd">人物档案 · 跟拍 11 个月 · 24 分钟</div></div><span class="rv">9.6</span></li>
+          <li><div><b>旧书店闭店访谈</b><div class="rd">人物档案 · 对话型 · 完整版 28 分钟</div></div><span class="rv">9.4</span></li>
+          <li><div><b>河涌清淤四十天</b><div class="rd">城市事件 · 事件型 · 18 分钟</div></div><span class="rv">9.2</span></li>
+          <li><div><b>搬家前的最后一夜</b><div class="rd">人物档案 · 六户群像 · 26 分钟</div></div><span class="rv">9.1</span></li>
+          <li><div><b>菜市场收摊之后</b><div class="rd">场所记录 · 现场声 · 14 分钟</div></div><span class="rv">9.0</span></li>
+          <li><div><b>凌晨四点的豆腐作坊</b><div class="rd">手艺与工序 · 完整流程 · 16 分钟</div></div><span class="rv">8.9</span></li>
+          <li><div><b>老街露天放映记</b><div class="rd">社区放映 · 事件型 · 13 分钟</div></div><span class="rv">8.8</span></li>
+          <li><div><b>纺织厂改的排练厅</b><div class="rd">场所记录 · 两时期对照 · 21 分钟</div></div><span class="rv">8.7</span></li>
+        </ol>
+      </section>
+
+    </div>
+
+    <aside class="right" aria-label="辅助信息">
+      <div class="panel">
+        <div class="panel-h">近期上线</div>
+        <ul class="mini-list">
+          <li><a href="#featured"><b>夜班末班车 · 番外</b><span>11-25 · 9 分钟</span></a></li>
+          <li><a href="#featured"><b>河涌清淤四十天</b><span>11-12 · 18 分钟</span></a></li>
+          <li><a href="#featured"><b>旧书店闭店访谈</b><span>11-22 · 完整版 28 分钟</span></a></li>
+          <li><a href="#featured"><b>豆腐作坊工序图解</b><span>11-19 · 18 张图</span></a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-h">拍摄时间线</div>
+        <ul class="timeline">
+          <li><b>城南汽修一条街</b><time>2026-11-21 开机</time></li>
+          <li><b>夜班末班车 番外补拍</b><time>2026-11-16 完成</time></li>
+          <li><b>河涌清淤四十天 定剪</b><time>2026-11-06</time></li>
+          <li><b>旧书店 补授权访谈</b><time>2026-10-30</time></li>
+          <li><b>纺织厂 舞团专场排练</b><time>2026-10-22</time></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-h">放映点位</div>
+        <ul class="mini-list">
+          <li><a href="#news"><b>东山口旧祠堂</b><span>每月第二个周六 19:30</span></a></li>
+          <li><a href="#news"><b>老纺织厂活动室</b><span>每月最后一个周五 19:00</span></a></li>
+          <li><a href="#news"><b>河涌边社区广场</b><span>不定期，见更新公告</span></a></li>
+        </ul>
+        <div class="side-note">全部点位免费入场，自带坐垫，雨天顺延一周。</div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div class="brand">
+        <span class="name">换捿真实<small>HUANQI REAL</small></span>
+        <p>以城市日常为拍摄对象的纪实影像团队，2019 年起持续记录夜班、旧城、手艺与社区事件，档案标注拍摄时间、地点与授权范围。</p>
+      </div>
+      <div>
+        <h4>频道</h4>
+        <ul class="fl">
+          <li><a href="#cats">人物档案</a></li>
+          <li><a href="#cats">场所记录</a></li>
+          <li><a href="#cats">手艺与工序</a></li>
+          <li><a href="#cats">城市事件</a></li>
+          <li><a href="#cats">夜班系列</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul class="fl">
+          <li><a href="#featured">精选档案</a></li>
+          <li><a href="#updates">最新更新</a></li>
+          <li><a href="#deep">深度解析</a></li>
+          <li><a href="#guide">观看路径</a></li>
+          <li><a href="#rank">本月热榜</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul class="fl">
+          <li><a href="#news">社区放映点位</a></li>
+          <li><a href="#faq">授权与常见问题</a></li>
+          <li><a href="#comments">观众评论</a></li>
+          <li><a href="#related">延伸方向</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>换捿真实 · 纪实影像档案 ｜ 站内数据为档案管理与放映排期示例，统计截至 2026-11-25</span>
+      <span>所有条目在受访者授权范围内公开，未授权内容仅展示简介</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header=document.getElementById('siteHeader');
+  var toggle=document.getElementById('menuToggle');
+  if(toggle){
+    toggle.addEventListener('click',function(){
+      var open=header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.getElementById('mainNav').addEventListener('click',function(e){
+      if(e.target.tagName==='A'){header.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+    });
+  }
+
+  var input=document.getElementById('searchInput');
+  var btn=document.getElementById('searchBtn');
+  var grid=document.getElementById('cardGrid');
+  var noResult=document.getElementById('noResult');
+  var cards=grid?Array.prototype.slice.call(grid.querySelectorAll('.card')):[];
+
+  function clearMark(el){
+    var m=el.querySelectorAll('mark');
+    for(var i=0;i<m.length;i++){
+      var parent=m[i].parentNode;
+      parent.replaceChild(document.createTextNode(m[i].textContent),m[i]);
+      parent.normalize();
+    }
+  }
+
+  function runSearch(){
+    var q=(input.value||'').trim().toLowerCase();
+    var hit=0;
+    cards.forEach(function(c){
+      var key=(c.getAttribute('data-keywords')||'')+' '+c.textContent.toLowerCase();
+      var ok=!q||key.indexOf(q)>-1;
+      c.style.display=ok?'':'none';
+      if(ok)hit++;
+    });
+    if(noResult)noResult.style.display=(q&&hit===0)?'block':'none';
+    if(q&&hit>0){
+      var target=document.getElementById('featured');
+      if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  }
+
+  if(input){
+    input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();runSearch();}});
+    input.addEventListener('input',function(){if(input.value==='')runSearch();});
+  }
+  if(btn){btn.addEventListener('click',runSearch);}
+})();
+</script>
+</body>
+  </html>
